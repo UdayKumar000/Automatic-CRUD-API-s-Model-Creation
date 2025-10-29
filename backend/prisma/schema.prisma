@@ -1,0 +1,154 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User{
+  id Int @id @default(autoincrement())
+  name String
+  email String @unique
+  password String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+
+
+
+
+model teachers{
+techerName String 
+teacherAge Int 
+teacherMobile BigInt 
+teacherScore Int 
+teacherId Int @id
+}
+
+
+
+
+
+
+model Students{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+model studentsts{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+model scientsts{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+model starts{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+model states{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+model cities{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+model gods{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+model godz{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+model godzila{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+
+
+model goodies{
+id Int @id
+firstName String 
+lastName String 
+age Int 
+joinedDate DateTime @default(now())
+}
+
+
+
+
+
+model details{
+id Int @id
+firstName String 
+lastName String 
+email String @unique
+}
+
+
+model admin{
+id Int @id
+firstName String 
+lastName String 
+password String 
+email String @unique
+}
