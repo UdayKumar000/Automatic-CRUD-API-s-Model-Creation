@@ -1,0 +1,9 @@
+-- CreateTable
+CREATE TABLE `newmod` (
+    `col1` INTEGER NOT NULL,
+    `col2` VARCHAR(191) NOT NULL,
+    `col3` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `id` VARCHAR(191) NOT NULL,
+
+    PRIMARY KEY (`col1`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

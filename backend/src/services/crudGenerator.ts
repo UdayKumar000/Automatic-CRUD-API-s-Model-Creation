@@ -50,7 +50,7 @@ export function generateCrudRouter(modelName: string) {
     router.get("/:id", async (req, res) => {
         try {
             const result = await getModelClient(table).findUnique({
-                where: { id: Number(req.params.id) },
+                where: { id: String(req.params.id) },
             });
             res.json(result);
         } catch (err) {
@@ -62,7 +62,7 @@ export function generateCrudRouter(modelName: string) {
     router.put("/:id", async (req, res) => {
         try {
             const result = await getModelClient(table).update({
-                where: { id: Number(req.params.id) },
+                where: { id: String(req.params.id) },
                 data: req.body,
             });
             res.json(result);
@@ -75,7 +75,7 @@ export function generateCrudRouter(modelName: string) {
     router.delete("/:id", async (req, res) => {
         try {
             await getModelClient(table).delete({
-                where: { id: Number(req.params.id) },
+                where: { id: String(req.params.id) },
             });
             res.json({ message: `${modelName} deleted successfully` });
         } catch (err) {

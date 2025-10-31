@@ -21,12 +21,12 @@ const ColomnAttributes = ({ field, index }) => {
     console.log(`${v === 1 ? 'id' : ''}`);
     const dataType = fields.filter((_, idx) => idx === index)[0].type;
     return (
-        <div>
-            {dataType && attributes[dataType].map((attr, i) => (<label htmlFor="">
+        <div className='flex gap-1 items-center h-full justify-start w-[300px]' >
+            {dataType && attributes[dataType].map((attr, i) => (<label className='flex w-[100px]'>
                 <input type={attr.name === "Primary Key" ? 'radio' : 'checkbox'} name={`${attr.name === "Primary Key" ? 'id' : ''}`} value={attr.value}
                     onChange={
                         (e) => handleChange(index, "attributes", e.target)} />
-                {attr.name}
+                <p className='pl-2 font-semibold text-sm' >{attr.name}</p>
             </label>))}
 
 

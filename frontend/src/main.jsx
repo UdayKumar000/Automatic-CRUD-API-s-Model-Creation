@@ -3,9 +3,16 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import ModelDataContext from './contexts/ModelDataContext.jsx'
+import AuthProvider from './contexts/AuthContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <ModelDataContext>
-    <App />
-  </ModelDataContext>
+
+  <AuthProvider>
+    <ModelDataContext>
+      <App />
+    </ModelDataContext>
+  </AuthProvider>
 )
+
+
+

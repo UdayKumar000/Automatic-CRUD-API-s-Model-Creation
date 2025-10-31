@@ -8,17 +8,20 @@ import { ModelDataContext } from '../contexts/ModelDataContext.jsx'
 
 
 const Fields = ({ field, index }) => {
-  const { fields, handleChange, handleRemoveField } = useContext(ModelDataContext);
+  const { fields, handleRemoveField } = useContext(ModelDataContext);
   return (
-    <div>
+    <div className='flex justify-between w-full'>
       <ColomnName field={field} index={index} />
       <ColomnType field={field} index={index} />
-      <ColomnAttributes field={field} index={index} />
+      <div  >
+        <ColomnAttributes field={field} index={index} />
+      </div>
+
       {fields.length > 1 && (
         <button
           type="button"
           onClick={() => handleRemoveField(index)}
-          className="bg-red-500 text-white px-2 rounded"
+          className="bg-red-500 text-white px-2 w-[50px] rounded"
         >
           ✕
         </button>

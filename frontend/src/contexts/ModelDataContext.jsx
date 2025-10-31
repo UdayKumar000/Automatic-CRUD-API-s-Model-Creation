@@ -51,7 +51,7 @@ const DataModelContext = ({ children }) => {
         setFields([...fields, { name: "", type: "" }]);
     };
 
-    // Remove field row (optional)
+    // Remove field row
     const handleRemoveField = (index) => {
         const updatedFields = fields.filter((_, i) => i !== index);
         setFields(updatedFields);

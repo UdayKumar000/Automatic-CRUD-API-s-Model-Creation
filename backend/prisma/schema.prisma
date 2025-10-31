@@ -145,10 +145,36 @@ email String @unique
 }
 
 
+
+
+
+
+
+model newmod{
+col1 Int  @id
+col2 String 
+col3 DateTime @default(now())
+id String @default(uuid())
+}
+
+
+model freshmod{
+clo1 Int 
+col2 DateTime @default(now())
+col3 Decimal 
+id String @unique @default(uuid())
+}
+
+
+model freshnewmod{
+clo1 Int  @id
+col2 DateTime @default(now())
+col3 Decimal 
+id String @unique @default(uuid())
+}
+
 model admin{
-id Int @id
-firstName String 
-lastName String 
-password String 
 email String @unique
+password String
+id String @unique @default(uuid())
 }

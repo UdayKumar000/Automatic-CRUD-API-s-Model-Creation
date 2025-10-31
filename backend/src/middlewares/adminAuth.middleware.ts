@@ -3,10 +3,13 @@ import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 dotenv.config();
 
-export const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
+export const adminAuthMiddleware = (req: Request, res: Response, next: NextFunction) => {
 
     try {
         const role = (req as any).userRole;
+        if (!role) {
+            return res.status(401).json({ error: "Unauthorized: No role found" });
+        }
         if (role !== "admin") {
             return res.status(403).json({ error: "Forbidden: Admins only" });
         }

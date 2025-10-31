@@ -6,6 +6,8 @@ import { loadModelFiles } from "./services/loadModels.js";
 import { generateCrudRouter } from "./services/crudGenerator.js";
 import dotenv from 'dotenv';
 import userRouter from './routes/user.router.js';
+import adminRouter from './routes/admin.router.js';
+
 dotenv.config();
 const app: Express = express();
 
@@ -24,7 +26,8 @@ export function createRoutes() {
 
 createRoutes();
 
-app.use('/user', userRouter);
+app.use('/', adminRouter);
+app.use('/', userRouter);
 app.use('/', modelRoutes);
 
 app.get("/", (_req: Request, res: Response) => {

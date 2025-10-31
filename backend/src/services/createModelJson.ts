@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { json } from 'stream/consumers';
 
 const __dirname = path.resolve();
 
@@ -40,3 +39,6 @@ export const createModelJson = (newModel: Model) => {
         throw error
     }
 }
+
+
+
