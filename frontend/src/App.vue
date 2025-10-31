@@ -178,7 +178,8 @@ onMounted(getLocalStorage)
             </div>
         </header>
 
-        <v-data-table class="data-table" :items="data" :headers="headers" :items-per-page="10" show-current-page>
+        <v-data-table class="data-table" v-if="data && data.length > 0" :items="data" :headers="headers"
+            :items-per-page="10" show-current-page>
             <template #item.actions="{ item }">
                 <div class="action-buttons" v-if="role === 'admin'">
                     <VBtn @click="editUser(item)" small color="indigo" variant="flat" class="btn-edit">
@@ -193,6 +194,12 @@ onMounted(getLocalStorage)
                 </div>
             </template>
         </v-data-table>
+
+        <!-- no data available message -->
+
+        <div v-else class="no-data">
+            <em>No data available</em>
+        </div>
 
         <!-- Edit Dialog -->
         <VDialog v-model="dialog" width="500">

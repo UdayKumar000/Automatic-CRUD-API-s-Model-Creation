@@ -66,12 +66,19 @@ const DataModelContext = ({ children }) => {
         try {
             const res = await fetch("http://localhost:3000/createModel", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${localStorage.getItem("token")}`
+                },
                 body: JSON.stringify(body),
             });
             const data = await res.json();
-            alert("✅ Table created successfully!");
-            console.log(data);
+            if (!res.ok) {
+                alert("❌ Error creating table: " + (data.message || "Unknown error"));
+            } else {
+                alert("✅ Table created successfully!");
+                console.log(data);
+            }
         } catch (error) {
             console.error("Error submitting:", error);
             alert("❌ Something went wrong!");
