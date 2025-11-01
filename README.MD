@@ -122,19 +122,19 @@ Open the dev server URL (usually http://localhost:5173) in your browser.
 ![Dashboard](./screenshots/Home.png)
 
 - Here is Create Model Page you can add how many fields you want and sselect the data type for each field
-![Create Model](./screenshots/create-model.png)
+![Create Model](./screenshots/Create-Model.png)
 
 - After selecting data type the attributes are visible for each field
-![Create Model 2](./screenshots/create-model-01.png)
+![Create Model 2](./screenshots/Create-Model-01.png)
 
 - Here is View Model Page where you can see all the available models from this page you can create new model and add new records to models also
-![View Model](./screenshots/view-models.png)
+![View Model](./screenshots/View-Model.png)
 
 - Here is View Records Page where you can see all the records for a particular model you can also update and delete records from this page
 - **Note** : Only admin can create the model if a user is clicked on create model button he/she will be redirected to login page to login as admin
-![View Records](./screenshots/view-records.png)
+![View Records](./screenshots/View-Records.png)
 
 - Here is Add Record Page where you can add new records to a particular model
-![Add Record](./screenshots/create-record.png)
+![Add Record](./screenshots/Create-Record.png)
 
 ## Thank You
