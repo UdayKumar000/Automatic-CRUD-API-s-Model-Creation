@@ -121,6 +121,12 @@ Open the dev server URL (usually http://localhost:5173) in your browser.
 
 ![Dashboard](./screenshots/Home.png)
 
+- Register Page
+![Register](./screenshots/Register.png)
+
+- Login Page
+![Login](./screenshots/Login.png)
+
 - Here is Create Model Page you can add how many fields you want and sselect the data type for each field
 ![Create Model](./screenshots/Create-Model.png)
 
