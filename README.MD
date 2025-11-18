@@ -1,7 +1,7 @@
 # Automatic-CRUD-API-s-Model-Creation
 
 
-## What this repo is
+## About this Repository
 
 This repository contains a small automated CRUD API generator. The backend reads model definitions from a `models/` folder (JSON files), registers a CRUD router for each model, and uses Prisma as ORM.
 
